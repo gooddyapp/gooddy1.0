@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 60% 92%; /* #F7EFDF */
+    --foreground: 340 47% 7%; /* #1C0A10 */
+    --card: 35 100% 97%; /* #FFF8EE */
+    --card-foreground: 340 47% 7%; /* #1C0A10 */
+    --popover: 35 100% 97%; /* #FFF8EE */
+    --popover-foreground: 340 47% 7%; /* #1C0A10 */
+    --primary: 349 71% 32%; /* #8B182D */
+    --primary-foreground: 40 60% 92%; /* #F7EFDF */
+    --secondary: 37 48% 88%; /* #EFE4D2 */
+    --secondary-foreground: 340 47% 7%; /* #1C0A10 */
+    --muted: 37 48% 88%; /* #EFE4D2 */
+    --muted-foreground: 345 18% 35%; /* #6B4A52 */
+    --accent: 0 92% 95%; /* #FEE6E6 */
+    --accent-foreground: 349 71% 32%; /* #8B182D */
+    --destructive: 357 100% 31%; /* #9E0008 */
+    --destructive-foreground: 40 60% 92%; /* #F7EFDF */
+    --border: 28 37% 84%; /* #E6D6C8 */
+    --input: 355 10% 50%; /* #8C7375 */
+    --ring: 354 42% 46%; /* #A6444D */
+
+    --surface-inverse: 340 47% 7%; /* #1C0A10 */
+    --ink-subtle: 355 10% 50%; /* #8C7375 */
+    --ink-inverse: 40 60% 92%; /* #F7EFDF */
+    --brand-hover: 345 98% 23%; /* #72011E */
+    --brand-tint: 0 92% 95%; /* #FEE6E6 */
+    --link: 354 42% 46%; /* #A6444D */
+    --garnet: 349 71% 32%; /* #8B182D */
+    --velvet: 340 47% 7%; /* #1C0A10 */
+    --silk: 40 60% 92%; /* #F7EFDF */
+    --compact: 340 47% 7%; /* #1C0A10 */
+    --rose-gold: 15 49% 70%; /* #D8A08E */
+    --blush: 6 57% 89%; /* #F3D6D3 */
+    --phase-menstrual: 346 71% 25%; /* #6E1328 */
+    --phase-menstrual-tint: 358 100% 95%; /* #FFE6E7 */
+    --phase-menstrual-ink: 346 71% 25%; /* #6E1328 */
+    --phase-follicular: 349 62% 68%; /* #E07A8C */
+    --phase-follicular-tint: 353 100% 95%; /* #FFE6E9 */
+    --phase-follicular-ink: 349 38% 36%; /* #7E3946 */
+    --phase-ovulation: 35 50% 68%; /* #D6B485 Champagne */
+    --phase-ovulation-tint: 38 74% 94%; /* #FBF2E4 */
+    --phase-ovulation-ink: 36 48% 28%; /* #6B5026 */
+    --phase-luteal: 321 37% 36%; /* #7E3A66 */
+    --phase-luteal-tint: 326 79% 94%; /* #FCE5F2 */
+    --phase-luteal-ink: 321 37% 36%; /* #7E3A66 */
+    --status-success: 150 36% 27%; /* #2C5E45 */
+    --status-success-tint: 145 48% 91%; /* #DDF3E6 */
+    --status-warning: 35 100% 23%; /* #774500 */
+    --status-warning-tint: 28 100% 92%; /* #FFE8D4 */
+    --status-error: 357 100% 31%; /* #9E0008 */
+    --status-error-tint: 9 100% 95%; /* #FFE7E3 */
+    --status-info: 226 34% 38%; /* #404F82 */
+    --status-info-tint: 222 92% 95%; /* #E6EDFE */
+    --chart-1: 349 71% 32%; /* #8B182D */
+    --chart-2: 36 31% 47%; /* #9E8052 */
+    --chart-3: 226 31% 45%; /* #4F6097 */
+    --chart-4: 149 30% 35%; /* #3F765A */
+    --chart-5: 350 43% 58%; /* #C26676 */
+    --chart-6: 322 29% 44%; /* #905078 */
+    --mood-bright-tint: 28 100% 92%; /* #FFE8D4 */
+    --mood-bright-ink: 35 100% 23%; /* #774500 */
+    --mood-bright-selected: 35 100% 23%;
+    --mood-bright-on: 40 60% 92%; /* #F7EFDF */
+    --mood-calm-tint: 145 48% 91%; /* #DDF3E6 */
+    --mood-calm-ink: 150 36% 27%; /* #2C5E45 */
+    --mood-calm-selected: 150 36% 27%;
+    --mood-calm-on: 40 60% 92%;
+    --mood-neutral-tint: 36 31% 86%; /* #EAE0D0 */
+    --mood-neutral-ink: 350 12% 26%; /* #4D3A3D */
+    --mood-neutral-selected: 350 12% 26%;
+    --mood-neutral-on: 40 60% 92%;
+    --mood-low-tint: 222 92% 95%; /* #E6EDFE */
+    --mood-low-ink: 226 34% 38%; /* #404F82 */
+    --mood-low-selected: 226 34% 38%;
+    --mood-low-on: 40 60% 92%;
+    --mood-tense-tint: 0 92% 95%; /* #FEE6E6 */
+    --mood-tense-ink: 349 71% 32%; /* #8B182D */
+    --mood-tense-selected: 349 71% 32%;
+    --mood-tense-on: 40 60% 92%;
+    --symptom-skin-tint: 18 100% 94%; /* #FFE7DF */
+    --symptom-skin-ink: 16 26% 33%; /* #6B493E */
+    --symptom-skin-selected: 16 26% 33%;
+    --symptom-skin-on: 40 60% 92%;
+    --symptom-gut-tint: 145 48% 91%; /* #DDF3E6 */
+    --symptom-gut-ink: 150 36% 27%; /* #2C5E45 */
+    --symptom-gut-selected: 150 36% 27%;
+    --symptom-gut-on: 40 60% 92%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 340 47% 7%; /* #1C0A10 */
+    --foreground: 40 60% 92%; /* #F7EFDF */
+    --card: 342 40% 12%; /* #2A1219 */
+    --card-foreground: 40 60% 92%; /* #F7EFDF */
+    --popover: 342 40% 12%; /* #2A1219 */
+    --popover-foreground: 40 60% 92%; /* #F7EFDF */
+    --primary: 350 80% 71%; /* #F0788C */
+    --primary-foreground: 340 47% 7%; /* #1C0A10 */
+    --secondary: 347 54% 5%; /* #140609 */
+    --secondary-foreground: 40 60% 92%; /* #F7EFDF */
+    --muted: 347 54% 5%; /* #140609 */
+    --muted-foreground: 349 20% 74%; /* #C9AEB3 */
+    --accent: 345 59% 14%; /* #3A0F1A */
+    --accent-foreground: 350 80% 71%; /* #F0788C */
+    --destructive: 7 98% 80%; /* #FEA69A */
+    --destructive-foreground: 340 47% 7%; /* #1C0A10 */
+    --border: 343 31% 19%; /* #3E2129 */
+    --input: 355 10% 50%; /* #8C7375 */
+    --ring: 350 80% 71%; /* #F0788C */
+
+    --surface-inverse: 40 60% 92%; /* #F7EFDF */
+    --ink-subtle: 355 10% 50%; /* #8C7375 */
+    --ink-inverse: 340 47% 7%; /* #1C0A10 */
+    --brand-hover: 351 98% 82%; /* #FEA3B1 */
+    --brand-tint: 345 59% 14%; /* #3A0F1A */
+    --link: 350 80% 71%; /* #F0788C */
+    --garnet: 349 71% 32%; /* #8B182D */
+    --velvet: 340 47% 7%; /* #1C0A10 */
+    --silk: 40 60% 92%; /* #F7EFDF */
+    --compact: 342 41% 16%; /* #3A1822 */
+    --rose-gold: 15 49% 70%; /* #D8A08E */
+    --blush: 342 48% 20%; /* #4A1A28 */
+    --phase-menstrual: 347 57% 44%; /* #B0304C */
+    --phase-menstrual-tint: 345 59% 14%; /* #3A0F1A */
+    --phase-menstrual-ink: 350 79% 80%; /* #F4A3B0 */
+    --phase-follicular: 349 62% 68%; /* #E07A8C */
+    --phase-follicular-tint: 347 44% 17%; /* #3D1820 */
+    --phase-follicular-ink: 351 98% 82%; /* #FEA3B1 */
+    --phase-ovulation: 35 50% 68%; /* #D6B485 Champagne */
+    --phase-ovulation-tint: 37 39% 13%; /* #2E2414 */
+    --phase-ovulation-ink: 37 58% 80%; /* #EAD3AE */
+    --phase-luteal: 321 30% 50%; /* #A65A8C */
+    --phase-luteal-tint: 318 39% 13%; /* #2E1426 */
+    --phase-luteal-ink: 326 36% 78%; /* #DBB3CA */
+    --status-success: 145 24% 73%; /* #A9CAB7 */
+    --status-success-tint: 151 47% 11%; /* #0F2A1D */
+    --status-warning: 30 76% 71%; /* #EDB47C */
+    --status-warning-tint: 31 80% 10%; /* #2E1A05 */
+    --status-error: 7 98% 80%; /* #FEA69A */
+    --status-error-tint: 2 76% 13%; /* #3A0A08 */
+    --status-info: 224 48% 80%; /* #B3C0E4 */
+    --status-info-tint: 226 44% 14%; /* #141B33 */
+    --chart-1: 358 47% 70%; /* #D68E90 */
+    --chart-2: 35 50% 68%; /* #D6B485 */
+    --chart-3: 224 48% 80%; /* #B3C0E4 */
+    --chart-4: 146 21% 61%; /* #87B099 */
+    --chart-5: 351 98% 82%; /* #FEA3B1 */
+    --chart-6: 326 36% 78%; /* #DBB3CA */
+    --mood-bright-tint: 345 40% 16%;
+    --mood-bright-ink: 30 76% 71%; /* #EDB47C */
+    --mood-bright-selected: 30 76% 71%;
+    --mood-bright-on: 340 47% 7%; /* #1C0A10 */
+    --mood-calm-tint: 150 30% 14%;
+    --mood-calm-ink: 145 24% 73%; /* #A9CAB7 */
+    --mood-calm-selected: 145 24% 73%;
+    --mood-calm-on: 340 47% 7%;
+    --mood-neutral-tint: 30 12% 16%;
+    --mood-neutral-ink: 36 20% 76%; /* #D3C5B5 */
+    --mood-neutral-selected: 36 20% 76%;
+    --mood-neutral-on: 340 47% 7%;
+    --mood-low-tint: 226 30% 16%;
+    --mood-low-ink: 224 48% 80%; /* #B3C0E4 */
+    --mood-low-selected: 224 48% 80%;
+    --mood-low-on: 340 47% 7%;
+    --mood-tense-tint: 345 40% 16%;
+    --mood-tense-ink: 350 80% 71%; /* #F0788C */
+    --mood-tense-selected: 350 80% 71%;
+    --mood-tense-on: 340 47% 7%;
+    --symptom-skin-tint: 18 40% 16%;
+    --symptom-skin-ink: 18 100% 87%; /* #FFCEBF */
+    --symptom-skin-selected: 18 100% 87%;
+    --symptom-skin-on: 340 47% 7%;
+    --symptom-gut-tint: 150 30% 14%;
+    --symptom-gut-ink: 145 24% 73%;
+    --symptom-gut-selected: 145 24% 73%;
+    --symptom-gut-on: 340 47% 7%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 100, "opsz" 72;
+  }
+
+  h1 em,
+  h2 em,
+  h3 em,
+  .font-display em,
+  .font-accent {
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 72;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}

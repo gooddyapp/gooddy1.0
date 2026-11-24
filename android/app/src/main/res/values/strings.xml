@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">gooddy</string>
+    <string name="title_activity_main">gooddy</string>
+    <string name="package_name">com.gooddy.app</string>
+    <string name="custom_url_scheme">com.gooddy.app</string>
+</resources>

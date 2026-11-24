@@ -1,0 +1,55 @@
+---
+description: gooddy typography and colour tokens — Fraunces + Plus Jakarta Sans, Silk/Velvet, Champagne ovulation
+alwaysApply: true
+---
+
+# gooddy – Typography & colour spec
+
+Source of truth for fonts, text styles and colours. Use only these tokens. Do not hard-code font names, sizes or hex values in components. If a style is missing, ask before inventing one.
+
+## Font pairing
+
+| Role | Font |
+| --- | --- |
+| **Display** (headlines, big numbers, emotional words) | **Fraunces** soft serif (`SOFT` 100; italic also `WONK` 1) |
+| **Text** (body, buttons, labels, inputs, tabs) | **Plus Jakarta Sans** |
+
+Feeling: feminine, powerful, empowering, friendly, semi-minimal, fun, engaging, never overwhelming.
+
+## Text style tokens (Tailwind)
+
+| Token | Font | Weight | Size / LH | Tracking | Use |
+| --- | --- | --- | --- | --- | --- |
+| `text-display` | Fraunces | 700 | 56/56 | -1% | Hero numbers ("Day 14") |
+| `text-title1` | Fraunces | 600 | 34/38 | -0.5% | Screen titles |
+| `text-title2` | Fraunces | 600 | 26/30 | 0 | Section headers |
+| `text-title3` | Fraunces | 600 | 20/24 | 0 | Card titles, phase names |
+| `text-body-large` | Jakarta | 400 | 17/24 | 0 | Article / onboarding body |
+| `text-body` | Jakarta | 400 | 15/22 | 0 | Default text |
+| `text-body-strong` | Jakarta | 600 | 15/22 | 0 | Emphasis, list titles |
+| `text-caption` | Jakarta | 500 | 13/18 | 0 | Helper / secondary |
+| `text-label` | Jakarta | 700 | 12/16 | +8%, UPPERCASE | Eyebrows only |
+| `text-button` | Jakarta | 700 | 16/20 | 0 | Buttons |
+| `text-chip` | Jakarta | 600 | 13/16 | 0 | Chips / tags |
+| `text-tab` | Jakarta | 600 | 11/14 | 0 | Tab bar labels |
+
+Italic accent: `font-accent` / Fraunces italic — max one emotional word per screen.
+
+Rules:
+1. Fraunces only for headlines, big numbers, italic accent — never under 18px for functional UI.
+2. Plus Jakarta Sans for everything functional — never larger than 34px.
+3. Sentence case everywhere; only `text-label` is uppercase.
+4. Chart/stat numbers: add `tabular` (`font-variant-numeric: tabular-nums`).
+5. Prefer `font-display` + title tokens / `font-sans` + body tokens — never raw `fontFamily` or hex in components.
+
+## Colour tokens
+
+Themes: Silk (light) / Velvet (dark). Use semantic Tailwind tokens (`bg-background`, `text-foreground`, `bg-primary`, `bg-ovulation-tint`, etc.).
+
+Ovulation phase is **Champagne**: fill `#D6B485`, tint `#FBF2E4`/`#2E2414`, ink `#6B5026`/`#EAD3AE`. Phase colours only where they mean a phase.
+
+Core: surface / surfaceRaised / surfaceSunken / border / borderStrong / ink / inkMuted / inkSubtle / brand / onBrand / brandHover / brandTint / link / roseGold / blush.
+
+Status: success / warning / error / info (+ tints). Charts: chart-1…chart-6 in order.
+
+Shapes: `rounded-sm` 8, `rounded-md` 16, `rounded-pan` 28, `rounded-pill` 999. Spacing: 4, 8, 16, 24, 40. Screen margin: 24.
